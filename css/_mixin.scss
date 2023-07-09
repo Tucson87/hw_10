@@ -1,0 +1,34 @@
+@mixin Roboto($fs, $fw, $lh){
+    font-family: 'Roboto Slab', serif;
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+}
+
+@mixin Lora($fs, $fw, $lh){
+    font-family: 'Lora', serif;
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+}
+
+@mixin Lato($fs, $fw, $lh){
+    font-family: 'Lato', sans-serif;
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+}
+
+@mixin Quicksand($fs, $fw, $lh){
+    font-family: 'Quicksand', sans-serif;
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+}
+
+@mixin Flex($jc, $ai, $gp){
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    gap: $gp;
+}

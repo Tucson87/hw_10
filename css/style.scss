@@ -1,0 +1,398 @@
+@use 'color';
+
+@import 'mixin';
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Lora:wght@700&family=Quicksand:wght@400;500;700&family=Roboto+Slab:wght@700&display=swap');
+
+*{
+    border: none;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    background-color: color.$black85;
+    padding: 36px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    @include Flex(space-around, center, none);
+    &__logo{
+        @include Roboto(32px, 700, 32px);
+        color: color.$white;
+    }
+
+    .nav{
+        &__item{
+            &-link{
+                color: color.$white;
+            }
+        }
+    }
+    .socials{
+        &__item{
+            &-link{
+                svg{
+                    path{
+                        fill: color.$white;
+                    }
+                    rect{
+                        fill: color.$white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nav{
+    @include Flex(center, center, 56px);
+    &__item{
+        &-link{
+            @include Lato(22px, 500, 22px);
+        }
+    }
+}
+
+.langbar{
+    @include Flex(center, center, 4px);
+}
+
+.socials{
+    @include Flex(center, center, 32px);
+}
+
+.bg-foto{
+    background-image: url(../Images/derek-thomson-TWoL-QCZubY-unsplash\ 4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 100%;
+    width: 100%;
+    min-height: 964px;
+    margin-top: -119px;
+    @include Flex(center, center, 0px);
+    flex-direction: column;
+    gap: 72px;
+}
+
+.call-to-action{
+    @include Flex(center, center, 32px);
+    flex-direction: column;
+    background-color: color.$black85;
+    padding: 48px;
+
+    h1{
+        @include Lora(84px, 700, 100px);
+        white-space: pre-line;
+        color: color.$white;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    span{
+        @include Lato(24px, 400, 24px);
+        color: color.$white;
+    }
+
+    .btn{
+        padding: 21px 110px;
+    }
+}
+
+.btn{
+    background-color: color.$green;
+    color: color.$white;
+    text-transform: uppercase;
+    @include Lato(16px, 900, 16px);
+}
+
+.about{
+    @include Flex(center, center, none);
+    flex-direction: column;
+    padding: 144px 0 124px 0;
+
+    h2{
+        @include Roboto(56px, 700, 74px);
+        text-transform: uppercase;
+        color: color.$grey;
+    }
+
+    p{
+        @include Quicksand(20px, 500, 32px);
+        margin-top: 32px;
+        width: 70%;
+        text-align: center;
+        color: color.$grey;
+        margin-bottom: 64px;
+    }
+
+    &__items{
+        @include Flex(center, flex-start, none);
+        width: 100%;
+        &-el{
+            @include Flex(center, center, none);
+            flex-direction: column;
+            width: 100%;
+        
+            span{
+                @include Roboto(144px, 700, 190px);
+                color: color.$green;
+            }
+
+            svg{
+                margin-top: -102px;
+            }
+            p{
+                @include Quicksand(40px, 400, 32px);
+                text-align: center;
+                color: color.$grey;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.trip{
+    @include Flex(center, center, none);
+    flex-direction: column;
+    background-image: url(../Images/ken-cheung-VbLTNceBTFE-unsplash\ 1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-width: 100%;
+    min-height: 758px;
+
+    h2{
+        @include Roboto(56px, 700, 74px);
+        color: color.$white;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    h1{
+        @include Roboto(144px, 700, 144px);
+        color: color.$white;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    &__date{
+        @include Quicksand(24px, 500, 18px);
+        color: color.$white;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    p{
+        @include Quicksand(24px, 400, 32px);
+        color: color.$white;
+        text-align: center;
+        margin-bottom: 56px;
+        width: 65%;
+        margin-bottom: 16px;
+    }
+
+    svg{
+        margin-bottom: 40px;
+    }
+
+    &__discount{
+        @include Quicksand(28px, 500, 32px);
+        color: color.$white;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+    }
+
+    .btn{
+        padding: 19px 49px;
+    }
+}
+
+.ways{
+    padding: 124px 0 0 0;
+    @include Flex(center, center, none);
+    flex-direction: column;
+    width: 100%;
+    min-width: 100%;
+    min-height: 650px;
+
+    h2{
+        @include Roboto(56px, 700, 74px);
+        text-transform: uppercase;
+        color: color.$grey;
+        margin-bottom: 40px;
+    }
+
+    .btn{
+        padding: 19px 62px;
+        margin-bottom: 8px;
+    }
+
+    p{
+        @include Quicksand(14px, 500, 18px);
+        color: color.$grey;
+        margin-bottom: 8px;
+    }
+
+    &__pic{
+        @include Flex(center, center, 40px);
+        width: 100%;
+        margin-bottom: 50px;
+        &-img{
+            @include Flex(flex-start, flex-start, none);
+            span{
+                @include Roboto(18px, 400, 18px);
+                position: absolute;
+                background-color: color.$black85;
+                color: color.$white;
+                padding: 5px 8px;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+.travel{
+    @include Flex(center, center, none);
+    flex-direction: column;
+    background-image: url(../Images/jeremy-bishop-TI_3eaoMyjo-unsplash\ 1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: color.$green40;
+    width: 100%;
+    min-width: 100%;
+    min-height: 560px;
+    margin-top: 72px;
+
+    &__pic{
+        @include Flex(center, center, 112px);
+        &-img1{
+            background-image: url(../Images/photo-1500108870510-66db24a39ee4\ 1.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            min-width: 441px;
+            min-height: 294px;
+            @include Flex(flex-start, flex-start, none);
+
+            span{
+                color: color.$white;
+                background-color: color.$black;
+                margin-top: 10px;
+                margin-left: 7px;
+                @include Roboto(14px, 500, 17px);
+            }
+
+            svg{
+                margin-top: 130px;
+                margin-left: 55px;
+            }
+        }
+
+        &-img2{
+            background-image: url(../Images/artem-beliaikin-gBXX7odcoy0-unsplash\ 1.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            min-width: 514px;
+            min-height: 342px;
+            @include Flex(flex-start, flex-start, none);
+
+            span{
+                color: color.$white;
+                background-color: color.$black;
+                margin-top: 10px;
+                margin-left: 7px;
+                @include Roboto(14px, 500, 17px);
+            }
+
+            svg{
+                margin-top: 160px;
+                margin-left: 70px;
+            }
+        }
+
+        &-img3{
+            background-image: url(../Images/v2osk-WNS__aBJjl4-unsplash\ 1.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            min-width: 441px;
+            min-height: 294px;
+            @include Flex(flex-start, flex-start, none);
+
+            span{
+                color: color.$white;
+                background-color: color.$black;
+                margin-top: 10px;
+                margin-left: 7px;
+                @include Roboto(14px, 500, 17px);
+            }
+
+            svg{
+                margin-top: 130px;
+                margin-left: 20px;
+            }
+        }
+    }
+
+    h2{
+        @include Roboto(56px, 700, 74px);
+        text-transform: uppercase;
+        width: 100%;
+        color: color.$white;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+}
+
+.footer{
+    background: url(../Images/imgMountains\ 1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 96px 0;
+    @include Flex(space-around, center, none);
+    &__logo{
+        @include Roboto(32px, 700, 32px);
+        color: color.$black;
+    }
+
+    .nav{
+        &__item{
+            &-link{
+                color: color.$black;
+            }
+        }
+    }
+    .socials{
+        &__item{
+            &-link{
+                svg{
+                    path{
+                        fill: color.$black;
+                    }
+                    rect{
+                        fill: color.$black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nav{
+    @include Flex(center, center, 56px);
+    &__item{
+        &-link{
+            @include Lato(22px, 500, 22px);
+        }
+    }
+}
+
+.socials{
+    @include Flex(center, center, 32px);
+}
